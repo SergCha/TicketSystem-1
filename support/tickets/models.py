@@ -31,7 +31,7 @@ class Ticket(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     changed_at = models.DateTimeField(auto_now=True)
-    changed_by = models.ForeignKey('SupportOfficer', on_delete=None, default=None, null=True)
+    changed_by = models.ForeignKey('SupportOfficer', on_delete=None, default=None, null=True, blank=True)
 
 
 class Reactions(models.Model):
