@@ -1,7 +1,7 @@
 import uuid as uuid
-from django.db import models
+
 from django.contrib.auth.models import User
-from django.utils.timezone import now
+from django.db import models
 
 
 class SupportOfficer(models.Model):
@@ -29,17 +29,17 @@ class Ticket(models.Model):
         default='NE',
     )
 
-    created_at = models.DateTimeField(default=now())
-    changed_at = models.DateTimeField(null=True)
-    changed_by = SupportOfficer()
+    created_at = models.DateTimeField(auto_now_add=True)
+    changed_at = models.DateTimeField(auto_now=True)
+    changed_by = models.ForeignKey('SupportOfficer', on_delete=None, default=None, null=True)
 
 
 class Reactions(models.Model):
     ticket = models.ForeignKey('Ticket', on_delete=models.CASCADE)
     body = models.TextField()
 
-    created_at = models.DateTimeField(default=now())
-    changed_at = models.DateTimeField(null=True)
-    changed_by = SupportOfficer()
+    created_at = models.DateTimeField(auto_now_add=True)
+    changed_at = models.DateTimeField(auto_now=True)
+    changed_by = models.ForeignKey('SupportOfficer', on_delete=None, default=None, null=True)
 
 
