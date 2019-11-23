@@ -1,3 +1,4 @@
 .python-version
 .idea
 support/db.sqlite3
+__pycache__
