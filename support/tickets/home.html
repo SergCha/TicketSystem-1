@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Главная страница</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<body>
+
+	<!-- HEADER-->
+	<div class="navbar-fixed">
+		<nav>        
+			<div class="nav-wrapper amber accent-2">
+				<div class="container">
+					<a href ="home.html" class="brand-logo"><img src="logo.jpg" height="68" width="260" alt="" vspace="3" align="top"></a>
+					<a href ="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="home.html">Главная</a></li>
+						<li><a href="send.html">Отправить заявку</a></li>
+						<li><a href="check.html">Посмотреть статус заявки</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+					<ul class="sidenav" id="slide-out">
+						<li><a href="home.html">Главная</a></li>
+						<li><a href="send.html">Отправить заявку</a></li>
+						<li><a href="check.html">Посмотреть статус заявки</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<!-- SLIDER/BANNER-->
+	<div class="container">
+		<div class="carousel carousel-slider">
+			<a href="#one!" class="carousel-item"><img src="img1.jpg" alt=""></a>
+			<a href="#two!" class="carousel-item"><img src="img2.jpg" alt=""></a>
+			<a href="#three!" class="carousel-item"><img src="img3.jpg" alt=""></a>
+		</div>
+	</div>
+
+	<!-- ПРЕИМУЩЕСТВА-->
+	<div class="container">
+		<div class="row"></div>
+		<div class="row">
+			<div class="col xl3 l4 m6 s12 center-align">
+				<img src="galochka1.svg" alt="" height="61" width="98">
+				<h4>> 4500 обращений</h4>
+				<p>Помощь предоставлена 100%</p>
+			</div>
+			<div class="col xl3 l4 m6 s12 center-align">
+				<img src="galochka1.svg" alt="" height="61" width="98">
+				<h4>>Высокое качество обслуживания</h4>
+				<p>Диспетчеры вежливо ответят на все Ваши вопросы</p>
+			</div>
+			<div class="col xl3 l4 m6 s12 center-align">
+				<img src="galochka1.svg" alt="" height="61" width="98">
+				<h4>> 4400 довольных клиентов</h4>
+				<p>Результативность 98%</p>
+			</div>
+			<div class="col xl3 l4 m6 s12 center-align">
+				<img src="galochka1.svg" alt="" height="61" width="98">
+				<h4>>Лучшие специалисты</h4>
+				<p>Вам помогут мастера своего дела</p>
+			</div>                        
+		</div>
+	</div>
+
+	<!-- ОТПРАВИТЬ ЗАЯВКУ-->
+	<div class="row center">
+		<div class="right hide-on-med-and-down">						
+		</div>
+		<form action="send.html">
+			<button class="btn purple darken-3 waves-effect waves-light" type="submit" name="action">Отправить заявку
+				<i class="material-icons right">send</i>
+			</button>
+		</form>
+		<div class="row"></div>
+		<div class="row"></div>		
+	</div>
+
+	<!-- FOOTER-->
+	<footer class="page-footer amber accent-3">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+				</div>
+				<div class="col l3 s12">
+				</div>
+				<div class="col l3 s12">
+				</div>
+			</div>
+		</div>
+		<div class="center footer-copyright amber accent-3">
+			<div class="container">
+				<a class="purple-text text-darken-3" href="http://materializecss.com">Made by Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.sidenav').sidenav();
+			$('.carousel.carousel-slider').carousel({
+				fullWidth:false, indicators:true})
+			$('input#input_text, textarea#textarea2').characterCounter();
+		});
+	</script>
+
+</body>
+
+</html>
