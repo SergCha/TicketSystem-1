@@ -6,16 +6,16 @@ from django.views.decorators.http import require_POST
 from tickets.models import Ticket
 
 def home(request):
-    return render(request, 'tickets/home.html', {'ticket': ticket})
+    return render(request, 'tickets/home.html')
 
 def send(request):
-    return render(request, 'tickets/send.html', {'ticket': ticket})
+    return render(request, 'tickets/send.html')
 
 def check(request):
-    return render(request, 'tickets/check.html', {'ticket': ticket})
+    return render(request, 'tickets/check.html')
 
 def faq(request):
-    return render(request, 'tickets/faq.html', {'ticket': ticket})
+    return render(request, 'tickets/faq.html')
 
 def get_ticket_by_uuid(request, uuid):
     try:

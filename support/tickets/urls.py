@@ -1,4 +1,10 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls import url
+from django.conf.urls.static import static
+from django.contrib import admin
+from tickets.views import home
+
 
 from . import views
 
@@ -9,4 +15,4 @@ urlpatterns = [
     path('', views.send, name='send'),
     path('', views.check, name='check'),
     path('', views.faq, name='faq'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
