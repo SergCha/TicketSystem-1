@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
-
-  <title>Статус заявки</title>
+  <title>Статус обращения</title>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -12,84 +10,90 @@
   <link rel="stylesheet" href="css/style.css">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 </head>
 
 <body>
-
   <div class="navbar-fixed">
     <nav>        
-      <div class="nav-wrapper amber accent-2">
+      <div class="nav-wrapper">
         <div class="container">
-          <a href ="home.html" class="brand-logo"><img src="logo.jpg" height="68" width="260" alt="" vspace="3" align="top"></a>
+          <a href ="home.html" class="brand-logo">Ticket System</a>
           <a href ="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="home.html">Главная</a></li>
-            <li><a href="send.html">Отправить заявку</a></li>
-            <li><a href="check.html">Посмотреть статус заявки</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-          <ul class="sidenav" id="slide-out">
-            <li><a href="home.html">Главная</a></li>
-            <li><a href="send.html">Отправить заявку</a></li>
-            <li><a href="check.html">Посмотреть статус заявки</a></li>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="home.html">Отправить обращение</a></li>
+            <li><a href="check.html">Посмотреть статус обращения</a></li>
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="home.html">Отправить обращение</a></li>
+          <li><a href="check.html">Посмотреть статус обращения</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>
   </div>
-
-
-
-  <form action="login.php" method="post" id="clientLogin">
-    <input type="hidden">    <strong></strong>
-    <br>
-    <div>
-      <label for="email">E-Mail адрес:</label>
-      <input id="email" type="text" name="lemail" size="30" value="">
-    </div>
-    <div>
-      <label for="ticketno">ID заявки:</label>
-      <input id="ticketno" type="text" name="lticket" size="16" value="">
-    </div>
-    <p>
-      <input class="btn purple darken-3" type="submit" value="Посмотреть статус">
-    </p>
-  </form>
-
-  <!-- FOOTER-->
-  <footer class="page-footer amber accent-3">
+  <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <div class="row center">
+          <h5 class="center purple-text text-darken-3">Статус обращения</h5>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="reporter_email" type="email" class="validate">
+                    <label for="reporter_email">Ваш Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input id="ticketno" type="text" name="lticket" size="16" value="">
+                    <label for="ticketno">ID обращения:</label>
+                  </div>
+                </div>
+              </form>
+            </div>
         </div>
-        <div class="col l3 s12">
+        <div>
+          <button class="btn purple darken-3 waves-effect waves-light" type="submit" name="action">Проверить статус
+            <i class="material-icons right">send</i>
+          </button>
         </div>
-        <div class="col l3 s12">
+        <div class="show-on-med-and-down" hidden="hidden">
+          <button class="btn purple darken-3 waves-effect waves-light btn-large" type="submit" name="action">Проверить статус
+            <i class="material-icons right">send</i>
+          </button>
         </div>
-      </div>
+        <div class="container">
+          <div class="section">
+          </div>
+          <br><br>
+        </div>
     </div>
-    <div class="center footer-copyright amber accent-3">
-      <div class="container">
-        <a class="purple-text text-darken-3" href="http://materializecss.com">Made by Materialize</a>
-      </div>
-    </div>
-  </footer> 
-
-  <!-- Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.sidenav').sidenav();
-      $('.carousel.carousel-slider').carousel({
-        fullWidth:false, indicators:true})
-      $('input#input_text, textarea#textarea2').characterCounter();
-    });
-  </script>
-
+  </div>  
 </body>
+
+<!-- FOOTER-->
+<footer class="page-footer amber accent-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l3 s12"></div>
+      <div class="col l3 s12"></div>
+      <div class="col l3 s12"></div>
+    </div>
+  </div>
+  <div class="center footer-copyright amber accent-3">
+    <div class="container">
+      <a class="purple-text text-darken-3" href="http://materializecss.com">Ticket System</a>
+    </div>
+  </div>
+</footer>             
+              
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
 </html>

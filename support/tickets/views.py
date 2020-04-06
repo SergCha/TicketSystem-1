@@ -8,9 +8,6 @@ from tickets.models import Ticket
 def home(request):
     return render(request, 'tickets/home.html')
 
-def send(request):
-    return render(request, 'tickets/send.html')
-
 def check(request):
     return render(request, 'tickets/check.html')
 
