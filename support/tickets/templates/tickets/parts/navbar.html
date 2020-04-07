@@ -1,0 +1,58 @@
+  <div class="navbar-fixed">
+    <nav>        
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href ="home.html" class="brand-logo">Ticket System</a>
+          <a href ="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="home.html">Отправить обращение</a></li>
+            <li><a href="check.html">Посмотреть статус обращения</a></li>
+          </ul>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="home.html">Отправить обращение</a></li>
+          <li><a href="check.html">Посмотреть статус обращения</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <div class="row center">
+          <h5 class="center purple-text text-darken-3">Статус обращения</h5>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="reporter_email" type="email" class="validate">
+                    <label for="reporter_email">Ваш Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input id="ticketno" type="text" name="lticket" size="16" value="">
+                    <label for="ticketno">ID обращения:</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div>
+          <button class="btn purple darken-3 waves-effect waves-light" type="submit" name="action">Проверить статус
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        <div class="show-on-med-and-down" hidden="hidden">
+          <button class="btn purple darken-3 waves-effect waves-light btn-large" type="submit" name="action">Проверить статус
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        <div class="container">
+          <div class="section">
+          </div>
+          <br><br>
+        </div>
+    </div>
+  </div>  
