@@ -14,10 +14,6 @@ def check(request):
     return render(request, 'tickets/check.html')
 
 
-def faq(request):
-    return render(request, 'tickets/faq.html')
-
-
 def get_ticket_by_uuid(request, uuid):
     try:
         ticket = Ticket.objects.get(pk=uuid)
@@ -30,3 +26,4 @@ def get_ticket_by_uuid(request, uuid):
 @csrf_exempt
 def post_new_ticket(request):
     print(request.body)
+    return render(request, 'home.html')
