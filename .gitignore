@@ -1,6 +1,5 @@
 .python-version
 .idea
 support/db.sqlite3
-support/virtualenv
 __pycache__/
 */__pycache__/

@@ -1,23 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}Статус обращения{% endblock %}
-
 {% block content %}
 
-<form action="login.php" method="post" id="clientLogin">
-    <input type="hidden">    <strong></strong>
-    <br>
-    <div>
-      <label for="email">E-Mail адрес:</label>
-      <input id="email" type="text" name="lemail" size="30" value="">
+  <h5 class="center purple-text text-darken-3">Статус обращения</h5>
+    <div class="row">
+        <form action="login.php" method="post" id="clientLogin">
+            <input type="hidden">    <strong></strong>
+            <br>
+            <div>
+                <label for="email">E-Mail адрес:</label>
+                <input id="email" type="text" name="lemail" size="30" value="">
+            </div>
+            <div>
+                <label for="ticketno">ID заявки:</label>
+                <input id="ticketno" type="text" name="lticket" size="16" value="">
+            </div>
+            <p>
+            <input class="btn purple darken-3" type="submit" value="Посмотреть статус">
+            </p>
+        </form>
     </div>
-    <div>
-      <label for="ticketno">ID заявки:</label>
-      <input id="ticketno" type="text" name="lticket" size="16" value="">
-    </div>
-    <p>
-      <input class="btn purple darken-3" type="submit" value="Посмотреть статус">
-    </p>
-  </form>
-
-{% endblock %}

@@ -3,6 +3,7 @@ import uuid as uuid
 from annoying.fields import AutoOneToOneField
 from django.contrib.auth.models import User
 from django.db import models
+from django.conf import settings
 
 
 class SupportOfficer(models.Model):
