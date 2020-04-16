@@ -1,9 +1,7 @@
-from django import forms
+from django.forms import ModelForm
+from tickets.models import Ticket, TicketStatus
 
-from .models import Ticket
-
-class TicketForm(forms.ModelForm):
-
+class TicketForm(ModelForm):
     class Meta:
         model = Ticket
-        fields = ('subject', 'body', 'reporter_email', 'reporter_name')
+        fields = ['reporter_name', 'reporter_email', 'subject', 'body', 'state']

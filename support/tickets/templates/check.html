@@ -2,21 +2,25 @@
 
 {% block content %}
 
-  <h5 class="center purple-text text-darken-3">Статус обращения</h5>
+  <h5 class="center purple-text text-darken-3" style="margin-top: 5%;">Статус обращения</h5>
     <div class="row">
-        <form action="login.php" method="post" id="clientLogin">
-            <input type="hidden">    <strong></strong>
+        <table>
+        <form action="login.php" method="post" id="clientLogin">{% csrf_token %}
+            <input type="hidden"><strong></strong>
             <br>
             <div>
-                <label for="email">E-Mail адрес:</label>
-                <input id="email" type="text" name="lemail" size="30" value="">
+                <h6 for="email">E-Mail адрес:</h6>
+                <input id="email" type="text" name="lemail" size="30" value="" placeholder="email">
             </div>
             <div>
-                <label for="ticketno">ID заявки:</label>
-                <input id="ticketno" type="text" name="lticket" size="16" value="">
+                <h6 for="ticketno">ID заявки:</h6>
+                <input id="ticketno" type="text" name="lticket" size="16" value="" placeholder="ID заявки">
             </div>
             <p>
-            <input class="btn purple darken-3" type="submit" value="Посмотреть статус">
+            <input class="btn purple darken-3" type="submit" name="action" value="Посмотреть статус" style="float: right; margin-top: 5%;">
             </p>
         </form>
+    </table>
     </div>
+
+{% endblock content %}
