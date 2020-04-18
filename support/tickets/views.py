@@ -33,9 +33,9 @@ def post_new_ticket(request):
         if ticketform.is_valid():
             ticketform.save()
             reporter_name = ticketform.cleaned_data["reporter_name"]
-            return HttpResponse("<h2>Hello, {0}</h2>".format(reporter_name))
+            return HttpResponse("<h2>Hello, {0}</h2>".format(reporter_name))     #вспомогательная строка для контроля записи в БД
         else:
-            return HttpResponse("Invalid data")
+            return HttpResponse("Invalid data")   #вспомогательная строка для контроля записи в БД
     else:
         ticketform = TicketForm()
         return render(request, "home.html", {"ticketform": ticketform})
