@@ -7,5 +7,5 @@ urlpatterns = [
     path('add/', views.post_new_ticket),
     path('', views.home, name='post-new'),
     path('check/', views.check, name='check'),
-    path('check/login.php', views.login, name='login'),
+    path('check/search/', views.search_ticket),
 ]

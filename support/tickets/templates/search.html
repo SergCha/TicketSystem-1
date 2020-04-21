@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Данные обращения</h3>
+    <form method="POST" action="">
+    	{% csrf_token %}
+		<p>Код обращения: {{ form.uuid }}</p>
+        <p>Имя пользователя: {{ form.reporter_name }}</p>
+        <p>E-mail пользователя: {{ form.reporter_email }}</p>
+        <p>Тема обращения: {{ form.subject }}</p>
+        <p>Описание проблемы: {{ form.body }}</p>
+    </form>
+{% endblock %}
