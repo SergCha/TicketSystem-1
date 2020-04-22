@@ -5,7 +5,8 @@
   <h5 class="center purple-text text-darken-3" style="margin-top: 5%;">Статус обращения</h5>
     <div class="row">
         <table>
-        <form method="POST" id="id_ticket" action="search/">{% csrf_token %}
+        <form method="POST" id="id_ticket" action="{% url 'check' %}">
+            {% csrf_token %}
             <input type="hidden"><strong></strong>
             <br>
             <div>

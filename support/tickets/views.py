@@ -12,14 +12,6 @@ def home(request):
 	return render(request, 'home.html')
 
 
-def check(request):
-    return render(request, 'check.html')
-
-
-def login(request):
-    return render(request, 'login.php')
-
-
 def get_ticket_by_uuid(request, uuid):
     try:
         ticket = Ticket.objects.get(pk=uuid)
@@ -45,12 +37,15 @@ def post_new_ticket(request):
     ticket_form = TicketForm()
     return render(request, "home.html", {"ticketform": ticket_form})
 
-def search_ticket(request):
+def check(request):
     if request.method == 'POST':
-        ticket_id = request.POST.get('id_ticket')
-        ticket_email = request.POST.get('reporter_email')
-        search_ticket_form = get_object_or_404(Ticket, uuid=ticket_id, reporter_email=ticket_email)
+        search_ticket_form = SearchTicketForm(request.POST)
+        if search_ticket_form.is_valid():
+            ticket_id = request.POST.get('id_ticket')
+            ticket_email = request.POST.get('reporter_email')
+            ticket = get_object_or_404(Ticket, uuid=ticket_id, reporter_email=ticket_email)
+            return render(request, "search.html", {'form' : ticket})
     else:
         search_ticket_form = SearchTicketForm()
 
-    return render(request, "search.html", {'form' : search_ticket_form})
+    return render(request, "check.html", {'form' : search_ticket_form})

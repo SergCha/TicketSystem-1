@@ -10,5 +10,5 @@ class TicketForm(ModelForm):
         fields = ['reporter_name', 'reporter_email', 'subject', 'body']
 
 class SearchTicketForm(forms.Form):
-        reporter_email = forms.EmailField()
-        id_ticket = forms.CharField()
+    reporter_email = forms.EmailField()
+    id_ticket = forms.CharField()
